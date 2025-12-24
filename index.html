@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Divine Blessings</title>
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+        background-image: url("https://is.zobj.net/image-server/v1/images?r=23EmbYoqAijUmSFwGD81Ofl8TKOOjxNpIcNh47XTbCBeq7F_4Zv8NhNu1uYXMDTe-kGMNEhs3NAVkIKyEaTbLJ1fbfDO9gYSM1200z81oVNDYG9qSiD9-TFyjGvX9MraBrLZ7xAN5YoDCVa8T59U8II2-HO4IbF85Z2MrY5g4MgUyFIJZ5EQjyrFW6DALzY_9A4g3cmncEi6Aqb35ptpVEZRSvJL4wQU3oPy6uvIwuCpbaDf3jugmXIbPJ8");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #000;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Bottom Text */
+    .bottom-text {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+        font-size: 26px;
+        color: gold;
+        font-weight: bold;
+        text-shadow: 2px 2px 5px black;
+    }
+
+    /* Jesus Image */
+    .jesus {
+        position: absolute;
+        bottom: 60px;
+        right: 20px;
+        width: 200px;
+        z-index: 2;
+    }
+
+    /* Flowers */
+    .flower {
+        position: absolute;
+        top: -50px;
+        right: 100px;
+        font-size: 24px;
+        animation: fall linear infinite;
+        z-index: 3;
+    }
+
+    @keyframes fall {
+        0% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(100vh);
+            opacity: 0;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- Jesus Image -->
+<img class="jesus" src="https://is.zobj.net/image-server/v1/images?r=Q77_7UoeQ3BE1F0n8wRv1Xu7AATVU-Qqr0f2R3WSfKK_a74gzCENfG_AUx6k6GPgNU6ibF_f7XVP2W7-NonmrY2jgbHr1mJ82GrI1tTab02x1FS8oZJqX9eq6L4K-3O6e2nxEzBXepqbu0F6EKB2PXwyScWNY0yoBFD5Cgg0bs11Luxu75q_Zoswpt1azEvOfbSSM8g8stDh_l1wSGK9I1y9bt47UTitFYx8tbxjLC_4MVF43CEURwRtid0" alt="Jesus">
+
+<!-- Flower Shower -->
+<script>
+    function createFlower() {
+        const flower = document.createElement("div");
+        flower.classList.add("flower");
+        flower.innerHTML = "🌸";
+        flower.style.right = (20 + Math.random() * 200) + "px";
+        flower.style.animationDuration = (3 + Math.random() * 3) + "s";
+        document.body.appendChild(flower);
+
+        setTimeout(() => {
+            flower.remove();
+        }, 6000);
+    }
+
+    setInterval(createFlower, 300);
+</script>
+
+<!-- Bottom Message -->
+<div class="bottom-text">
+    🌼 HAPPY Birthday JESUS 🌼 <br>
+    May Lord KRISHNA bless you always 🙏
+</div>
+
+</body>
+</html>
+
